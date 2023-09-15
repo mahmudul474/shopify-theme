@@ -1,1 +1,86 @@
-<h2>q</h2>
+{%- liquid
+  assign  bg = section.settings.bannerBg
+  assign   title = section.settings.bannerTitle
+  assign  bg = section.settings.bannerBg
+
+-%}
+
+
+ 
+ 
+  <div class="p-5 text-center bg-image" style="
+
+  {% if  bg !=null %}
+ background-image: url('{{bg | img_url: 'medium'}}');
+ 
+   {% else %}
+     background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+{% endif %}
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-start align-items-start p-5 mt-5  ">
+        <div class="text-white">
+           {%- if  title !=null -%}
+           <h1 class="mb-3">{{title}}</h1>
+             {%- else -%}
+             <h1 class="mb-3">Heading</h1>
+           {%- endif -%}
+          
+          <p class="mb-3 ">{{section.settings.description}}</p>
+          
+          <a class="btn btn-outline-light btn-lg" href="{{section.settings.btnUrl}}" role="button">{{section.settings.btnText}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+{% schema %}
+  {
+    "name":"banner",
+    "settings": [
+       {
+        "type": "image_picker",
+        "id": "bannerBg",
+        "label": "banner "
+        
+       },
+       {
+        "type": "text",
+        "id": "bannerTitle",
+        "label": "banneheading",
+        "default": "Big Sales"
+       },
+       {
+        "type": "text",
+        "id": "description",
+        "label": "description",
+        "default": "Big sales our  shopping mall " 
+       },
+       {
+        "type": "text",
+        "id":"btnText",
+        "label": "btn",
+        "default": "shop now"
+       },
+       {
+        "type": "url",
+        "id": "btnUrl",
+        "label": "Button url"
+       }
+    
+    ],
+    "presets": [
+      {
+        "name": "banner",
+         "category": "banner"
+      }
+    ]
+
+}
+{% endschema %}
