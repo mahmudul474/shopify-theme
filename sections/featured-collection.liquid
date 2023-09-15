@@ -1,56 +1,71 @@
-{% assign collection = section.settings.collection %}
-<div class="featured-product-section">
+{%- liquid
+   assign  collections = section.settings.featuredCollection
+
+-%}
+
+
+<div class="py-5">
   <div class="container">
-    <div class="section-heading">
-      {% if section.settings.title != blank %}
-      <h2>{{ section.settings.title }} ({{ collection.all_products_count }})</h2>
-      {% else %}
-        <h2>{{ collection.title }} ({{ collection.all_products_count }})</h2>
-      {% endif %}
-    </div>
+
+    <h1>{{ section.settings.collectionTitle }}</h1>
+
     <div class="row">
-      {% for product in collection.products limit: section.settings.limit %}
-        {% render 'product-card', product:product %}
-      {% endfor %}
+  {% for product in collections.products limit: section.settings.showCollection %}
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card">
+        <div class="card-block">
+          <img src="{{ product.featured_image | img_url: 'medium' }}" />
+
+          <h4 class="card-title">{{ product.title }}</h4>
+          <p class="card-text p-y-1">{{ product.description }}</p>
+          <h6 class="card-subtitle text-muted">{{ product.price | money }}</h6>
+
+          <a href="#" class="btn mx-auto btn-primary text-light">Add to Cart</a>
+        </div>
+      </div>
     </div>
-    {% if collection.all_products_count > section.settings.limit %}
-    <div class="more-products text-center">
-      <a href="{{ collection.url }}" class="btn btn-secondary">View all</a>
-    </div>
-    {% endif %}
+  {% endfor %}
+</div>
+
+  {% if collections.all_products_count> section.settings.showCollection %}
+  <button  class="btn mx-auto btn-primary text-light"><a class="text-light" href="{{collection.url}}"> Viwe collection </a></button>
+    
+  {% endif %}
+
+
   </div>
 </div>
 
+
+
 {% schema %}
-{
-  "name": "Featured collection",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Section title",
-      "default": "Featured Section"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    },
-    {
-      "type": "range",
-      "min": 2,
-      "max": 20,
-      "step": 1,
-      "default": 6,
-      "id": "limit",
-      "label": "Product limits"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Featured collection",
-      "category": "Collection"
-    }
-  ]
-}
+  {
+    "name": "featured-collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "collectionTitle",
+        "label": "Title",
+        "default": "Fetured collection "
+      }, {
+        "type": "collection",
+        "id": "featuredCollection",
+        "label": "Collection"
+      }, {
+        "type": "range",
+        "max": 30,
+        "min": 3,
+        "step": 1,
+        "id": "showCollection",
+        "label": "show collection ",
+        "default": 4
+      }
+    ],
+    "presets": [
+      {
+        "name": "featured-collection",
+        "category": "collection"
+      }
+    ]
+  }
 {% endschema %}
