@@ -88,38 +88,6 @@
           "btm_footer_text": "<p>@All rights reserved<\/p>"
         }
       },
-      "c61af751-557a-4623-ae94-728a69cdf0f3": {
-        "type": "slideshow",
-        "blocks": {
-          "57a58b87-3650-43b2-b802-3e90873c5eb2": {
-            "type": "slider",
-            "settings": {
-              "title": "Summer Sale",
-              "rte": "<p>Some representative placeholder content for the second slide.<\/p>",
-              "btn_1": "Shop Now",
-              "btn_url": "shopify:\/\/collections\/womens-wear"
-            }
-          },
-          "7034a14a-1a37-4708-bd2d-f1130cc04d46": {
-            "type": "slider",
-            "settings": {
-              "slider_img": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg",
-              "title": "Winter Sale",
-              "rte": "<p>Some representative placeholder content for the second slide.<\/p>",
-              "btn_1": "Shop Now",
-              "btn_url": "shopify:\/\/collections\/frontpage"
-            }
-          }
-        },
-        "block_order": [
-          "57a58b87-3650-43b2-b802-3e90873c5eb2",
-          "7034a14a-1a37-4708-bd2d-f1130cc04d46"
-        ],
-        "settings": {
-          "enable_auto_slide": true,
-          "show_prev_next": true
-        }
-      },
       "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2": {
         "type": "newsletter",
         "settings": {
@@ -141,7 +109,6 @@
       }
     },
     "content_for_index": [
-      "c61af751-557a-4623-ae94-728a69cdf0f3",
       "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2"
     ]
   },
