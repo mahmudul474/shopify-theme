@@ -103,6 +103,7 @@
           "7034a14a-1a37-4708-bd2d-f1130cc04d46": {
             "type": "slider",
             "settings": {
+              "slider_img": "shopify:\/\/shop_images\/long-espresso-sits-on-a-wooden-stool.jpg",
               "title": "Winter Sale",
               "rte": "<p>Some representative placeholder content for the second slide.<\/p>",
               "btn_1": "Shop Now",
@@ -119,57 +120,8 @@
           "show_prev_next": true
         }
       },
-      "569a1bb4-5784-40f9-91e8-eaaa06f83718": {
-        "type": "image-with-text",
-        "blocks": {
-          "ecfdb42b-8330-4905-bc0d-f3e5f57f5a1a": {
-            "type": "title",
-            "settings": {
-              "title": "This is main title"
-            }
-          },
-          "ded9c970-da5f-4c2b-87ff-069f9379543f": {
-            "type": "description",
-            "settings": {
-              "description": "<p>This is a description section!<\/p>"
-            }
-          },
-          "117afbf3-f329-44ea-a903-579d72d54942": {
-            "type": "action",
-            "settings": {
-              "btn_label": "See more",
-              "btn_url": ""
-            }
-          }
-        },
-        "block_order": [
-          "ecfdb42b-8330-4905-bc0d-f3e5f57f5a1a",
-          "ded9c970-da5f-4c2b-87ff-069f9379543f",
-          "117afbf3-f329-44ea-a903-579d72d54942"
-        ],
-        "settings": {
-          "position": "right"
-        }
-      },
       "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2": {
         "type": "newsletter",
-        "blocks": {
-          "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2-168961299684c5532c-0": {
-            "type": "title",
-            "settings": {
-              "title": "Subscribe us!"
-            }
-          },
-          "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2-168961299684c5532c-1": {
-            "type": "email_form",
-            "settings": {
-            }
-          }
-        },
-        "block_order": [
-          "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2-168961299684c5532c-0",
-          "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2-168961299684c5532c-1"
-        ],
         "settings": {
           "padding_top": 50,
           "padding_bottom": 50,
@@ -190,7 +142,6 @@
     },
     "content_for_index": [
       "c61af751-557a-4623-ae94-728a69cdf0f3",
-      "569a1bb4-5784-40f9-91e8-eaaa06f83718",
       "d4994a7a-41f2-4822-9ba0-ba0e1258dfa2"
     ]
   },
